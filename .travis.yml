@@ -9,6 +9,7 @@ matrix:
         - cmake -DTBB_BUILD_PYTHON=ON -DCMAKE_INSTALL_PREFIX=~/.local .
         - make install -j2
         - ctest -j2 --output-on-failure --timeout 500
+        - LD_LIBRARY_PATH=~/.local/lib/ PYTHONPATH=~/.local/lib/python3.5/site-packages/ python3 -m TBB .travis.test.py
       addons:
         apt:
           packages:
