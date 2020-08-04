@@ -15,7 +15,7 @@ matrix:
             - g++
             - cmake
             - swig
-            - python-dev
+            - python3-dev
     - os: osx
       compiler: clang
       script:
