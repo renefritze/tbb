@@ -587,7 +587,7 @@ if (TBB_BUILD_TESTS)
 endif ()
 
 if (TBB_BUILD_PYTHON)
-  find_package(PythonInterp)
+  find_package(Python3 COMPONENTS Interpreter Development)
   find_package(PythonLibs ${PYTHON_VERSION_STRING} EXACT)
   find_package(SWIG 3)
   if (PythonLibs_FOUND AND SWIG_FOUND AND TBB_BUILD_SHARED)
